@@ -1,0 +1,64 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="ca.ltchs.ltchsmenu.fragment.AddOrderItemFragment">
+
+    <LinearLayout
+        android:id="@+id/itemLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/textview_margin_left"
+            android:layout_marginTop="@dimen/textview_margin_top"
+            android:background="@android:color/white"
+            android:text="Cake"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/item_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/textview_margin_left"
+            android:layout_marginTop="@dimen/textview_margin_top_small"
+            android:background="@android:color/white"
+            android:text="Cake is a delicious dessert to be enjoyed." />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+<!--
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/zoom_item_fab"
+            android:tint="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/fab_margin"
+            app:srcCompat="@android:drawable/ic_menu_zoom" />-->
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/add_item_fab"
+            android:tint="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/fab_margin"
+            app:srcCompat="@android:drawable/ic_input_add" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

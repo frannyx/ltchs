@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.AddOrderActivity"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+<LinearLayout
+    android:id="@+id/items_container" android:orientation="vertical"   android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/start_order_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:id="@+id/new_order_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_centerHorizontal="true"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="@string/add_new_order"/>
+
+
+        <EditText
+            android:id="@+id/datePicker"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_tab_horizontal_margin"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/new_order_textview"
+            android:background="@android:color/white"
+            android:hint="Select Date..."
+            android:textAppearance="?android:attr/textAppearance"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimaryDark"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+
+        <Spinner
+            android:id="@+id/spinner_menu_date"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/datePicker"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/white"
+            android:drawSelectorOnTop="true"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimaryDark"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/startOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/spinner_menu_date"
+            android:layout_gravity="center_vertical"
+            android:text="Start Order" />
+
+
+
+    </RelativeLayout>
+
+
+
+
+    <LinearLayout
+    android:orientation="vertical"
+    android:id="@+id/item_one_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+        android:visibility="gone">
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/item_two_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:visibility="gone">
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+
+</LinearLayout>
+
+
+
+
+
+

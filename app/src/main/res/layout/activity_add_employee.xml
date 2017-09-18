@@ -1,0 +1,146 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AddEmployeeActivity" >
+
+    <TextView
+        android:id="@+id/txt_header"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="@string/add_new_employee"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/white" />
+
+    <RelativeLayout
+        android:id="@+id/add_employee_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_header"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+    <QuickContactBadge
+        android:id="@+id/contact_badge"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="10dp"
+        android:src="@mipmap/ic_launcher"
+        android:layout_alignParentStart="true"/>
+
+
+<!--
+    <Spinner
+        android:id="@+id/spinner_employee_access"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:hint="@string/access"
+        android:animateLayoutChanges="true"
+        android:spinnerMode="dropdown" />-->
+
+        <RadioGroup
+            android:id="@+id/employee_access"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:layout_toRightOf="@+id/contact_badge">
+
+
+            <RadioButton
+                android:text="@string/admin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:text="@string/user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+
+    <EditText
+        android:id="@+id/txt_first_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/contact_badge"
+        android:hint="@string/first_name"
+        android:inputType="textPersonName"
+        android:textAppearance="?android:attr/textAppearance"
+        android:textColor="@android:color/black" />
+
+    <EditText
+        android:id="@+id/txt_last_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/txt_first_name"
+        android:hint="@string/last_name"
+        android:inputType="textPersonName"
+        android:textAppearance="?android:attr/textAppearance"
+        android:textColor="@android:color/black" />
+
+
+    <EditText
+        android:id="@+id/txt_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/phone_number"
+        android:inputType="phone"
+        android:textAppearance="?android:attr/textAppearance"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/txt_last_name" />
+
+    <EditText
+        android:id="@+id/txt_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_phone_number"
+        android:layout_marginTop="8dp"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:textAppearance="?android:attr/textAppearance"
+        android:textColor="@android:color/black" />
+
+    <EditText
+        android:id="@+id/txt_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_email"
+        android:layout_marginTop="8dp"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:textAppearance="?android:attr/textAppearance"
+        android:textColor="@android:color/black" />
+
+    <Spinner
+        android:id="@+id/spinner_locations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_password"
+        android:layout_marginTop="8dp"
+        android:prompt="@string/select_a_location"
+        android:animateLayoutChanges="true"
+        android:spinnerMode="dropdown" />
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinner_locations"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:paddingBottom="2dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="2dp"
+        android:text="@string/add"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/tomato"
+    tools:context="ca.ltchs.ltchsmenu.activity.LoginActivity">
+
+    <LinearLayout
+        android:id= "@+id/loginLayout"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        android:background= "@drawable/login_layout"
+        android:layout_centerInParent="true">
+
+        <EditText
+            android:id ="@+id/loginUsername"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:inputType="text"
+            android:textAppearance="?android:attr/textAppearance"
+            android:textColor="@android:color/black"
+            android:hint = "Username"/>
+        <TextView
+            android:id="@+id/loginUsername_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/loginUsername"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@android:color/holo_red_dark"
+            android:text="@string/incorrect_username"
+            android:visibility="invisible"/>
+
+        <EditText
+            android:id ="@+id/loginPassword"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@+id/loginUsername_error"
+            android:textColor="@android:color/white"
+            android:inputType="numberPassword"
+            android:textAppearance="?android:attr/textAppearance"
+            android:hint = "Password"/>
+
+        <TextView
+            android:id="@+id/loginPassword_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_red_dark"
+            android:text="@string/incorrect_password"
+            android:visibility="invisible"/>
+
+        <Button
+            android:id ="@+id/loginButton"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center_horizontal"
+            android:alpha="0.75"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccentDark"
+            android:text ="LOGIN"
+            android:onClick="login()" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
